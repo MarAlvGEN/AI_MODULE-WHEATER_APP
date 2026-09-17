@@ -10,7 +10,7 @@ Aplicación interactiva para la consulta del pronóstico meteorológico en tiemp
 
 ---
 
-## El Experimento
+## Resumen del Experimento
 
 El objetivo era generar una aplicación web completa utilizando **la menor cantidad de prompts posible y casi cero interacción humana sobre el código**. El flujo fue:
 
