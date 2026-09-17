@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aplicación interactiva y moderna del clima con geocodificación en tiempo real impulsada por Open-Meteo API." />
+  <title>Weather App | Pronóstico Meteorológico en Tiempo Real</title>
+
+  <!-- Favicon SVG en Data URI (No requiere archivo externo adicional) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌤️</text></svg>" />
+
+  <!-- Hoja de Estilos Principal -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Encabezado de la Aplicación -->
+    <header class="app-header">
+      <div class="brand">
+        <svg class="brand__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+        </svg>
+        <h1 class="brand__title">Weather App</h1>
+      </div>
+      <p class="app-header__subtitle">Consulta el estado del tiempo en cualquier ciudad del mundo</p>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="app-main">
+      <!-- Sección de Búsqueda -->
+      <section class="search-section" aria-label="Buscador de ciudades">
+        <form id="search-form" class="search-form" role="search">
+          <div class="search-input-wrapper">
+            <input
+              type="text"
+              id="city-input"
+              class="search-input"
+              placeholder="Escribe una ciudad (ej. Madrid, Tokio, Buenos Aires)..."
+              autocomplete="off"
+              spellcheck="false"
+              required
+              aria-label="Nombre de la ciudad"
+            />
+            <svg class="search-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+
+          <button type="submit" id="search-btn" class="search-btn" aria-label="Buscar clima">
+            <span>Buscar</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </form>
+      </section>
+
+      <!-- Contenedor para Notificaciones y Errores (Accesible mediante aria-live) -->
+      <div id="status-container" class="status-container" aria-live="polite" aria-atomic="true"></div>
+
+      <!-- Indicador Visual de Carga (Spinner) -->
+      <div id="loading-indicator" class="loading-indicator" aria-hidden="true" hidden style="display: none;">
+        <div class="spinner" role="status" aria-label="Cargando pronóstico meteorológico"></div>
+        <p class="loading-text">Obteniendo información del clima...</p>
+      </div>
+
+      <!-- Sección de Visualización del Clima -->
+      <section id="weather-section" class="weather-section" aria-live="polite">
+        <div class="empty-state">
+          <div class="empty-state__icon">
+            <svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+            </svg>
+          </div>
+          <h2 class="empty-state__title">Consulta el Clima</h2>
+          <p class="empty-state__text">Escribe el nombre de una ciudad arriba y presiona Enter o Buscar para obtener el pronóstico en tiempo real.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Pie de Página -->
+  <footer class="app-footer">
+    <p>Datos meteorológicos provistos por <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> (Sin API Key).</p>
+  </footer>
+
+  <!-- Scripts Modulares ES6+ -->
+  <script type="module" src="src/js/main.js"></script>
+</body>
+</html>
