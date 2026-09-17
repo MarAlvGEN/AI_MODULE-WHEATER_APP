@@ -12,7 +12,7 @@ Aplicación interactiva para la consulta del pronóstico meteorológico en tiemp
 
 ## Resumen del Experimento
 
-El objetivo era generar una aplicación web completa utilizando **la menor cantidad de prompts posible y casi cero interacción humana sobre el código**.
+El objetivo era generar una aplicación web completa utilizando **la menor cantidad de prompts posible y casi cero interacción humana sobre el código**. Antigravity generó la aplicación con 2 errores evidentes, por lo que también aproveché para hacer comparativas de tiempos.
 
 ### Paso 1 - Recopilación en Obsidian
 
@@ -24,18 +24,18 @@ Envié los borradores de Obsidian a Gemini Flash 3.6 para que los ordenara, elim
 
 ### Paso 3 - Generación con Antigravity
 
-Copié el prompt completo de Obsidian y lo pegué en Antigravity (Gemini Flash 3.8 high). La aplicación se generó exitosamente en **2 prompts**.
+Copié el prompt completo y lo pegué en Antigravity (Gemini Flash 3.8 high). La aplicación se generó con dos bugs evidentes.
 
 ### Paso 4 - Inspección y detección de bugs
 
-Usé Vite para visualizar la web en tiempo real y las DevTools de Firefox para inspeccionar el DOM y CSS. Detecté 2 bugs:
+Usé Vite para visualizar la web en tiempo real y las DevTools de Firefox para inspeccionar el DOM y CSS
 - Bug N1 (lógico): Spinner de carga permanece visible
 - Bug N2 (visual): Espaciado de card y footer faltante
 
 ### Paso 5 - Corrección de bugs
 
 Cada bug se trató de forma diferente:
-- **Bug N1**: Usé Nemotron 3 Ultra Free (OpenCode) para diagnosticar → generó prompt → envié a Antigravity → corrigió (~25 min)
+- **Bug N1**: Usé Nemotron 3 Ultra Free (OpenCode) para diagnosticar → generó prompt → envié a Antigravity → corrigió (~15 min)
 - **Bug N2**: Corrección manual con DevTools + nvim (~3 min)
 
 ---
