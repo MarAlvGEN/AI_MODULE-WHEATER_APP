@@ -1,11 +1,19 @@
 # Prompt Inicial - Weather App
 
-**Motor:** Antigravity
+**Motor:** Antigravity (Gemini Flash 3.8 high)
 **Objetivo:** Generar el proyecto completo de la Weather App
 
-**Contexto:** Lo primero que hice fue recopilar los requisitos solicitados y empezar a generar ideas con Gemini y MiMo (OpenCode: Plan Mode).
+**Modelos utilizados en esta fase:**
+- **Gemini Flash 3.6** - Estructuró requisitos y ordenó prompts
+- **MiMo 2.5 Free** - Definió estructura de carpetas y sugirió estilos
 
-Una vez tenía la idea clara de lo que quería, escribí con ayuda de Gemini un prompt en obsidian pensando en la generación completa de la aplicación para posteriormente ser pasado a Antigravity.
+**Contexto:** El flujo fue el siguiente:
+
+1. **Recopilación en Obsidian**: Usé MiMo 2.5 Free (OpenCode en Plan Mode) para generar ideas iniciales sobre requisitos, estructura de carpetas y estilos. Todo se escribió directamente en un archivo de Obsidian.
+
+2. **Estructuración con Gemini**: Envié los borradores de Obsidian a Gemini Flash 3.6 para que los ordenara, eliminara redundancias y diera forma al prompt final.
+
+3. **Prompt final**: El resultado fue un único prompt optimizado y completo, listo para enviar a Antigravity.
 
 ---
 ## Prompt inicial

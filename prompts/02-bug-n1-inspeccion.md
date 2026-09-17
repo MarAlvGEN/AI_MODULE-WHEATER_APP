@@ -2,25 +2,31 @@
 
 **Problema**: El spinner de carga permanece visible permanentemente antes y después de buscar una ciudad.
 
-**Objetivo**: Probar la capacidad de Nemotron (OpenCode) para diagnosticar un problema con el mínimo contexto posible.
+**Modelo utilizado**: Nemotron 3 Ultra Free (a través de OpenCode en Plan Mode)
+
+**Objetivo**: Probar la capacidad de Nemotron para diagnosticar un problema con el mínimo contexto posible.
+
+**Tiempo total**: ~15 min (13 min Nemotron escaneando el proyecto).
+
+![[Pasted image 20260917151410.png]]
 
 ---
-
 ## Contexto
 
-Al inspeccionar la aplicación generada por Antigravity, detecté que el spinner de carga nunca desaparecía. En lugar de enviar el problema directamente a Antigravity, decidí probar Nemotron Ultra a través de OpenCode en Plan Mode para:
+Al inspeccionar la aplicación generada por Antigravity (Gemini Flash 3.8 high), detecté que el spinner de carga nunca desaparecía. En lugar de enviar el problema directamente a Antigravity, decidí poner a prueba Nemotron 3 Ultra Free a través de OpenCode en Plan Mode para:
 
-1. Ver si podía reconocer la estructura completa del proyecto sin explicaciones extensas
-2. Que generara un prompt de solución optimizado para Antigravity
+1. Ver si podía reconocer la estructura completa del proyecto sin explicaciones extensas.
+2. Verificar cuanto tiempo se tardaría en analizar el proyecto.
+3. Confirmar si era capaz de encontrar el error de forma efectiva.
+4. Que generara un prompt de solución optimizado para Antigravity.
 
 La idea era darle el menor contexto posible y observar si era capaz de identificar el flujo asíncrono roto.
 
 ---
-
 ## Input (Lo que le dije a Nemotron)
 
 ```
-"Tengo un problema de estado en mi aplicación web vanilla (Weather App). El mensaje/spinner de carga ('Obteniendo información del clima...') se queda visible permanentemente.
+"Tengo un problema de estado en mi aplicación web vanilla (Weather App). El mensaje/spinner de carga se queda visible permanentemente.
 
 Analiza el flujo de llamadas e identifica por qué no se está ejecutando correctamente lo "esperado" tras completar las peticiones HTTP. Muestra dónde se rompe el flujo asíncrono y explícame qué cambios se requieren en el bloque try...catch...finally o en la manipulación del DOM."
 
@@ -28,18 +34,18 @@ Una vez identificado el problema, genera un prompt para Antigravity con la soluc
 ```
 
 ---
-
 ## Output (Lo que Nemotron me devolvió)
 
-Nemotron identificó correctamente los problemas:
+Nemotron realizó las siguientes acciones:
 
-1. La llamada automática `handleWeatherSearch('Madrid')` al cargar la app causaba que el loading quedara pegado si fallaba
-2. No había protección contra búsquedas simultáneas
+1. Identificó que la llamada automática `handleWeatherSearch('Madrid')` al cargar la app causaba que el loading quedara pegado si fallaba y encontró una mejora en la lógica de las llamadas a funciones auxiliares.
+2. Ignoró la "explicación" y pasó directamente a la creación del prompt.
+3. Demoró 13min generando toda la respuesta.
 
 Generó el siguiente prompt para Antigravity:
 
 ```
-Actúa como Desarrollador JS Senior. Mi Weather App presenta un bug crítico: el indicador de carga permanece activo indefinidamente tras hacer una búsqueda.
+Actúa como Desarrollador JS Senior. Mi Weather App presenta un bug crítico: el indicador de carga permanece activo indefinidamente tras hacer una búsqueda/cargar la app.
 
 Necesito que refactorices el código fuente completo de los archivos afectados (`src/js/ui.js`, `src/js/main.js` y `src/js/api.js` si aplica) aplicando estas especificaciones exactas:
 
@@ -69,9 +75,16 @@ Entrégame el código refactorizado y funcional sin omitir ningún fragmento.
 ```
 
 ---
-
 ## Resultado
 
-Envié el prompt de Nemotron a Antigravity. Este refactorizó el código y corrigió el bug lógico correctamente.
+Envié el prompt de Nemotron a Antigravity (Gemini Flash 3.8 high). Este refactorizó el código y corrigió el bug lógico correctamente.
 
-![Nemotron Ultra dandolo todo XD](assets/demo/Pasted image 20260917151410.png)
+**Tiempo desglose:**
+- Nemotron escaneando el proyecto: ~13 min
+- Generación del prompt de solución: ~2 min
+- Antigravity corrigiendo el bug: ~10 min
+- **Total: ~25 min**
+
+FOTO ACAAAAAAAAAA
+
+<img width="1348" height="731" alt="image" src="https://github.com/user-attachments/assets/1dbe6fbb-0f62-4610-b02a-f0a23187f8ff" />

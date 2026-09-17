@@ -14,12 +14,9 @@ Aplicación interactiva para la consulta del pronóstico meteorológico en tiemp
 
 El objetivo era generar una aplicación web completa utilizando **la menor cantidad de prompts posible y casi cero interacción humana sobre el código**. El flujo fue:
 
-<img width="1348" height="731" alt="image" src="https://github.com/user-attachments/assets/1dbe6fbb-0f62-4610-b02a-f0a23187f8ff" />
+1. **Recopilación y estructuración del prompt**: Primero usé MiMo (OpenCode en Plan Mode) para generar ideas y definir requisitos, que saqué de la comanda y posteriormente escribí en Obsidian. Luego envié esos borradores a Gemini Flash 3.6 para que los estructurara y diera forma al prompt final optimizado para Antigravity.
 
-
-1. **Construcción del prompt**: Usé Gemini y MiMo (a través de OpenCode en Plan Mode) para definir requisitos, estructura de carpetas y especificaciones técnicas. El resultado fue un único prompt optimizado para Antigravity.
-
-2. **Generación con Antigravity**: Envié el prompt a Antigravity, que generó la aplicación completa en **solo 2 prompts**.
+2. **Generación con Antigravity**: Envié el prompt a Antigravity, que logró el 100% de la aplicación completa en **2 prompts**.
 
 3. **Inspección y corrección de bugs**: Tras revisar el código, encontré 2 bugs. Cada uno se trató de forma diferente para hacer uso de las distintas funcionalidades de la IA.
 
@@ -27,17 +24,21 @@ El objetivo era generar una aplicación web completa utilizando **la menor canti
 
 ## Modelos Utilizados
 
-| Modelo                  | Rol             | Qué hizo                                            |
-| ----------------------- | --------------- | --------------------------------------------------- |
-| **MiMo (OpenCode)**     | Apoyo           | Definió la estructura de carpetas y sugirió estilos |
-| **Gemini**              | Apoyo           | Estructuró los requisitos y ordenó los prompts      |
-| **Nemotron (OpenCode)** | Apoyo           | Identificó y diagnosticó el Bug N1                  |
-| **Antigravity**         | Motor principal | Generó la aplicación y corrigió el Bug N1           |
+| Modelo                      | Plan     | Costo | Rol                | Qué hizo                                      |
+| --------------------------- | -------- | ----- | ------------------ | --------------------------------------------- |
+| **MiMo 2.5 Free**           | Gratuito | $0    | Apoyo (prompts)    | Definió estructura de carpetas y estilos      |
+| **Gemini Flash 3.6**        | Gratuito | $0    | Apoyo (prompts)    | Estructuró requisitos y ordenó prompts        |
+| **Nemotron 3 Ultra Free**   | Gratuito | $0    | Apoyo (inspección) | Diagnosticó el Bug N1                         |
+| **Gemini Flash 3.8 (high)** | Gratuito | $0    | Motor principal    | Generó la app (Antigravity) y corrigió Bug N1 |
+
+**Costo total del experimento: $0 USD**
 
 **Herramientas complementarias:**
 - **Vite** - Servidor de desarrollo para visualizar la web en tiempo real
 - **Firefox DevTools** - Inspección del DOM y CSS en el navegador.
 - **nvim** - Editor de código.
+
+> Este proyecto costó **$0 USD**. Todos los modelos utilizados son gratuitos. Ver comparativa completa de precios y tiempos: [comparativa.md](comparativa.md)
 
 ---
 
@@ -63,18 +64,19 @@ Ver prompt de inspección y solución: [prompts/02-bug-n1-inspeccion.md](prompts
 
 ---
 
-### Bug N2 - Espaciado de la card (Visual)
+### Bug N2 - Correcciones Manuales (Visual)
 
-**Problema**: La tarjeta del clima quedaba muy pegada al borde superior del header.
+**Problema**: La tarjeta del clima quedaba muy pegada al header y faltaba el footer.
 
-**Qué hice**: Corrección manual directa en el CSS. No valía la pena gastar tokens en algo tan simple cuando el núcleo de la aplicación estaba terminado.
+**Qué hice**: Correcciones manuales directas. No valía la pena gastar tokens en algo tan simple cuando el núcleo de la aplicación estaba terminado.
 
-**Resultado**: Agregué `margin-top: 2rem` a la card para un espaciado correcto.
+**Resultado**:
+- Agregué `margin-top: 2rem` a la card para un espaciado correcto
+- Agregué el footer al HTML
+- Estilicé el footer manualmente con CSS
+- Enlacé correctamente el footer
 
 Ver detalle: [prompts/03-bug-n2-correccion-manual.md](prompts/03-bug-n2-correccion-manual.md)
-
-<img width="841" height="437" alt="image" src="https://github.com/user-attachments/assets/eeefae4f-489d-4a61-8975-2132d3c75083" />
-Benchmark de inteligencias artificiales
 
 ---
 
