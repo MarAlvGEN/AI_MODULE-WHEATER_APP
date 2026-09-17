@@ -14,6 +14,9 @@ Aplicación interactiva para la consulta del pronóstico meteorológico en tiemp
 
 El objetivo era generar una aplicación web completa utilizando **la menor cantidad de prompts posible y casi cero interacción humana sobre el código**. El flujo fue:
 
+<img width="1348" height="731" alt="image" src="https://github.com/user-attachments/assets/1dbe6fbb-0f62-4610-b02a-f0a23187f8ff" />
+
+
 1. **Construcción del prompt**: Usé Gemini y MiMo (a través de OpenCode en Plan Mode) para definir requisitos, estructura de carpetas y especificaciones técnicas. El resultado fue un único prompt optimizado para Antigravity.
 
 2. **Generación con Antigravity**: Envié el prompt a Antigravity, que generó la aplicación completa en **solo 2 prompts**.
@@ -33,8 +36,8 @@ El objetivo era generar una aplicación web completa utilizando **la menor canti
 
 **Herramientas complementarias:**
 - **Vite** - Servidor de desarrollo para visualizar la web en tiempo real
-- **DevTools** - Inspección del DOM y CSS en el navegador
-- **nvim** - Editor de código para correcciones manuales
+- **Firefox DevTools** - Inspección del DOM y CSS en el navegador.
+- **nvim** - Editor de código.
 
 ---
 
@@ -69,6 +72,9 @@ Ver prompt de inspección y solución: [prompts/02-bug-n1-inspeccion.md](prompts
 **Resultado**: Agregué `margin-top: 2rem` a la card para un espaciado correcto.
 
 Ver detalle: [prompts/03-bug-n2-correccion-manual.md](prompts/03-bug-n2-correccion-manual.md)
+
+<img width="841" height="437" alt="image" src="https://github.com/user-attachments/assets/eeefae4f-489d-4a61-8975-2132d3c75083" />
+Benchmark de inteligencias artificiales
 
 ---
 
