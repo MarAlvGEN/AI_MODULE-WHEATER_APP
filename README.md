@@ -16,7 +16,7 @@ El objetivo era generar una aplicación web completa utilizando **la menor canti
 
 1. **Recopilación y estructuración del prompt**: Primero usé MiMo (OpenCode en Plan Mode) para generar ideas y definir requisitos, que saqué de la comanda y posteriormente escribí en Obsidian. Luego envié esos borradores a Gemini Flash 3.6 para que los estructurara y diera forma al prompt final optimizado para Antigravity.
 
-2. **Generación con Antigravity**: Envié el prompt a Antigravity, que logró el 100% de la aplicación completa en **2 prompts**.
+2. **Generación con Antigravity**: Envié el prompt a Antigravity, que logró el 100% de la aplicación en **2 prompts**.
 
 3. **Inspección y corrección de bugs**: Tras revisar el código, encontré 2 bugs. Cada uno se trató de forma diferente para hacer uso de las distintas funcionalidades de la IA.
 
