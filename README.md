@@ -12,13 +12,31 @@ Aplicación interactiva para la consulta del pronóstico meteorológico en tiemp
 
 ## Resumen del Experimento
 
-El objetivo era generar una aplicación web completa utilizando **la menor cantidad de prompts posible y casi cero interacción humana sobre el código**. El flujo fue:
+El objetivo era generar una aplicación web completa utilizando **la menor cantidad de prompts posible y casi cero interacción humana sobre el código**.
 
-1. **Recopilación y estructuración del prompt**: Primero usé MiMo (OpenCode en Plan Mode) para generar ideas y definir requisitos, que saqué de la comanda y posteriormente escribí en Obsidian. Luego envié esos borradores a Gemini Flash 3.6 para que los estructurara y diera forma al prompt final optimizado para Antigravity.
+### Paso 1 - Recopilación en Obsidian
 
-2. **Generación con Antigravity**: Envié el prompt a Antigravity, que logró el 100% de la aplicación en **2 prompts**.
+Recopilé los requisitos de la comanda y usé MiMo 2.5 Free (OpenCode en Plan Mode) para generar ideas sobre la estructura de carpetas, estilos y especificaciones técnicas. Todo se escribió directamente en un archivo de Obsidian como borrador.
 
-3. **Inspección y corrección de bugs**: Tras revisar el código, encontré 2 bugs. Cada uno se trató de forma diferente para hacer uso de las distintas funcionalidades de la IA.
+### Paso 2 - Estructuración con Gemini
+
+Envié los borradores de Obsidian a Gemini Flash 3.6 para que los ordenara, eliminara redundancias y diera forma al prompt final optimizado para Antigravity.
+
+### Paso 3 - Generación con Antigravity
+
+Copié el prompt completo de Obsidian y lo pegué en Antigravity (Gemini Flash 3.8 high). La aplicación se generó exitosamente en **2 prompts**.
+
+### Paso 4 - Inspección y detección de bugs
+
+Usé Vite para visualizar la web en tiempo real y las DevTools de Firefox para inspeccionar el DOM y CSS. Detecté 2 bugs:
+- Bug N1 (lógico): Spinner de carga permanece visible
+- Bug N2 (visual): Espaciado de card y footer faltante
+
+### Paso 5 - Corrección de bugs
+
+Cada bug se trató de forma diferente:
+- **Bug N1**: Usé Nemotron 3 Ultra Free (OpenCode) para diagnosticar → generó prompt → envié a Antigravity → corrigió (~25 min)
+- **Bug N2**: Corrección manual con DevTools + nvim (~3 min)
 
 ---
 
