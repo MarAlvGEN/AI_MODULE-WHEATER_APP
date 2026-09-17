@@ -22,7 +22,7 @@ El objetivo era generar una aplicación web completa utilizando **la menor canti
 
 ---
 
-## Modelos Utilizados
+## Herramientas Utilizadas
 
 | Modelo                      | Plan     | Costo | Rol                | Qué hizo                                      |
 | --------------------------- | -------- | ----- | ------------------ | --------------------------------------------- |
@@ -44,7 +44,10 @@ El objetivo era generar una aplicación web completa utilizando **la menor canti
 
 ## Prompt Inicial
 
-El prompt completo que se envió a Antigravity para generar la aplicación:
+<img width="1042" height="671" alt="image" src="https://github.com/user-attachments/assets/08dadb7f-2c59-4048-9497-4d9517e77968" />
+
+
+> El prompt completo que se envió a Antigravity para generar la aplicación.
 
 Ver: [prompts/01-prompt-inicial.md](prompts/01-prompt-inicial.md)
 
