@@ -1,0 +1,73 @@
+# Weather App (Vanilla Web)
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Open-Meteo](https://img.shields.io/badge/Open--Meteo-API-00A8E8?style=flat)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+Aplicación interactiva para la consulta del pronóstico meteorológico en tiempo
+real, desarrollada con tecnologías web vanilla. Impulsada por la API pública y
+gratuita de [Open-Meteo](https://open-meteo.com/).
+
+<img width="1175" height="629" alt="image" src="https://github.com/user-attachments/assets/1332324f-e4ab-4dd1-b931-3fb5ec473c15" />
+
+---
+
+## Resumen del Experimento
+
+El objetivo era generar una aplicación web completa y sencilla que consumiera la
+API de Open-Meteo utilizando **la menor cantidad de prompts posible y casi cero
+interacción humana sobre el código**. Antigravity generó la aplicación con 2
+errores evidentes, por lo que también aproveché para hacer comparativas de
+tiempos.
+
+### Paso 1 - Recopilación en Obsidian
+
+Recopilé los requisitos de la comanda y usé MiMo 2.5 Free (OpenCode en Plan
+Mode) para generar ideas sobre la estructura de carpetas, estilos y
+especificaciones técnicas. Todo se escribió directamente en un archivo de
+Obsidian como borrador para eliminar redundancias y preparar el siguiente
+prompt.
+
+### Paso 2 - Estructuración con Gemini
+
+Envié el borrador de Obsidian a Gemini Flash 3.6 para que lo ordenara y diera
+forma al [prompt inicial](prompts/01-prompt-inicial.md) optimizado para
+Antigravity.
+
+### Paso 3 - Generación con Antigravity
+
+Copié el prompt completo y lo pegué en Antigravity (Gemini Flash 3.8 high). La
+aplicación se generó con dos bugs evidentes.
+
+### Paso 4 - Inspección y detección de bugs
+
+Usé Vite para visualizar la web en tiempo real y las DevTools de Firefox para
+inspeccionar el DOM y CSS para investigar más de lo que estaba pasando. Encontrando los siguientes bugs:
+
+- [Bug N1 (lógico)](prompts/02-bug-n1-inspeccion.md): Spinner de carga permanece visible
+- [Bug N2 (lógico)](prompts/03-bug-n2-correccion-manual.md): Espaciado de card y footer faltante
+
+### Paso 5 - Corrección de bugs
+
+Cada bug se trató de forma diferente:
+
+- **Bug N1**: Usé Nemotron 3 Ultra Free (OpenCode) para diagnosticar → generó
+  prompt → envié a Antigravity → corrigió (~15 min)
+- **Bug N2**: Corrección manual con DevTools + nvim (~3 min)
+
+---
+
+## Herramientas Utilizadas
+
+| Modelo | Plan | Costo | Rol | Qué hizo |
+| :--- | :--- | :--- | :--- | :--- |
+| **MiMo 2.5 Free** | Gratuito | $0 | Apoyo (prompts) | Definió estructura de carpetas y estilos |
+| **Gemini Flash 3.6** | Gratuito | $0 | Apoyo (prompts) | Estructuró requisitos y ordenó prompts |
+| **Nemotron 3 Ultra Free** | Gratuito | $0 | Apoyo (inspección) | Diagnosticó el Bug N1 |
+| **Gemini Flash 3.8 (high)** | Gratuito | $0 | Motor principal | Generó la app (Antigravity) y corrigió Bug N1 |
+
+**Costo total del experimento: $0 USD**
+
+> Ver comparativa completa de precios, tiempos y herramientas complementarias: [comparativa.md](comparativa.md)

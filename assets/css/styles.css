@@ -1,0 +1,746 @@
+/* ==========================================================================
+   styles.css - Hoja de Estilos de la Aplicación del Clima (Weather App)
+   Diseño Moderno, Responsive (Mobile-First), Glassmorphism y Micro-interacciones
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Variables CSS del Sistema de Diseño (:root)
+   -------------------------------------------------------------------------- */
+:root {
+	/* Paleta de Colores Base */
+	--bg-gradient-start: #0f172a;
+	--bg-gradient-mid: #1e293b;
+	--bg-gradient-end: #0f172a;
+
+	--color-primary: #0284c7;
+	--color-primary-hover: #0369a1;
+	--color-primary-focus: rgba(2, 132, 199, 0.4);
+
+	--color-surface: rgba(255, 255, 255, 0.08);
+	--color-surface-hover: rgba(255, 255, 255, 0.12);
+	--color-surface-card: rgba(30, 41, 59, 0.7);
+	--color-border: rgba(255, 255, 255, 0.15);
+	--color-border-focus: #38bdf8;
+
+	/* Tipografía y Textos */
+	--color-text-primary: #f8fafc;
+	--color-text-secondary: #94a3b8;
+	--color-text-muted: #64748b;
+
+	/* Alertas y Estados */
+	--color-error-bg: rgba(239, 68, 68, 0.15);
+	--color-error-border: rgba(239, 68, 68, 0.4);
+	--color-error-text: #fca5a5;
+
+	/* Temas de Clima */
+	--theme-sun: #f59e0b;
+	--theme-rain: #38bdf8;
+	--theme-cloud: #94a3b8;
+	--theme-thunder: #eab308;
+	--theme-snow: #e0f2fe;
+
+	/* Sombras y Efectos */
+	--shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+	--shadow-md:
+		0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+	--shadow-lg:
+		0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+	--shadow-glow: 0 0 25px rgba(56, 189, 248, 0.2);
+
+	/* Bordes y Transiciones */
+	--radius-sm: 0.5rem;
+	--radius-md: 0.875rem;
+	--radius-lg: 1.25rem;
+	--radius-full: 9999px;
+
+	--transition-fast: 0.15s ease;
+	--transition-normal: 0.25s ease;
+	--transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+	/* Fuentes */
+	--font-sans:
+		system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		'Helvetica Neue', Arial, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   Reset y Normalización Base
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px;
+	scroll-behavior: smooth;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	font-family: var(--font-sans);
+	background: radial-gradient(
+		circle at 50% 0%,
+		#1e3a8a 0%,
+		var(--bg-gradient-start) 65%,
+		#030712 100%
+	);
+	color: var(--color-text-primary);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	line-height: 1.5;
+	overflow-x: hidden;
+}
+
+/* Accesibilidad: Clase para lectores de pantalla */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Estructura Principal del Contenedor (Layout)
+   -------------------------------------------------------------------------- */
+.app-container {
+	width: 100%;
+	max-width: 680px;
+	margin: 0 auto;
+	padding: 2rem 1.25rem 3rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.75rem;
+	flex: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Cabecera (Header)
+   -------------------------------------------------------------------------- */
+.app-header {
+	text-align: center;
+	padding: 1rem 0 0.5rem;
+}
+
+.brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.75rem;
+	margin-bottom: 0.5rem;
+}
+
+.brand__icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	color: #38bdf8;
+	filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.5));
+}
+
+.brand__title {
+	font-size: clamp(1.75rem, 5vw, 2.25rem);
+	font-weight: 800;
+	letter-spacing: -0.025em;
+	background: linear-gradient(135deg, #f8fafc 30%, #38bdf8 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.app-header__subtitle {
+	color: var(--color-text-secondary);
+	font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+	font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   Sección del Buscador (Search Form)
+   -------------------------------------------------------------------------- */
+.search-section {
+	width: 100%;
+}
+
+.search-form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	position: relative;
+}
+
+@media (min-width: 520px) {
+	.search-form {
+		flex-direction: row;
+		align-items: stretch;
+	}
+}
+
+.search-input-wrapper {
+	position: relative;
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+
+.search-input-icon {
+	position: absolute;
+	left: 1.1rem;
+	width: 1.25rem;
+	height: 1.25rem;
+	color: var(--color-text-muted);
+	pointer-events: none;
+	transition: color var(--transition-fast);
+}
+
+.search-input {
+	width: 100%;
+	height: 3.25rem;
+	padding: 0 1.25rem 0 3rem;
+	font-size: 1rem;
+	font-family: inherit;
+	color: var(--color-text-primary);
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-md);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	outline: none;
+	transition:
+		border-color var(--transition-fast),
+		box-shadow var(--transition-fast),
+		background-color var(--transition-fast);
+}
+
+.search-input::placeholder {
+	color: var(--color-text-muted);
+}
+
+.search-input:focus {
+	border-color: var(--color-border-focus);
+	background: rgba(255, 255, 255, 0.12);
+	box-shadow:
+		0 0 0 3px var(--color-primary-focus),
+		var(--shadow-glow);
+}
+
+.search-input:focus + .search-input-icon,
+.search-input-wrapper:focus-within .search-input-icon {
+	color: #38bdf8;
+}
+
+.search-input:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.search-btn {
+	height: 3.25rem;
+	padding: 0 1.75rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	font-family: inherit;
+	color: #ffffff;
+	background: linear-gradient(135deg, var(--color-primary) 0%, #0284c7 100%);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: var(--radius-md);
+	cursor: pointer;
+	box-shadow: var(--shadow-sm);
+	transition:
+		transform var(--transition-fast),
+		box-shadow var(--transition-fast),
+		background-color var(--transition-fast),
+		opacity var(--transition-fast);
+	white-space: nowrap;
+}
+
+.search-btn:hover:not(:disabled) {
+	background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+	transform: translateY(-1px);
+	box-shadow:
+		var(--shadow-md),
+		0 0 15px rgba(2, 132, 199, 0.4);
+}
+
+.search-btn:active:not(:disabled) {
+	transform: translateY(0);
+}
+
+.search-btn:focus-visible {
+	outline: 2px solid #38bdf8;
+	outline-offset: 2px;
+}
+
+.search-btn:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+	transform: none;
+}
+
+/* --------------------------------------------------------------------------
+   Indicador de Carga (Loading Spinner)
+   -------------------------------------------------------------------------- */
+.loading-indicator {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 3rem 1rem;
+	animation: fadeIn 0.3s ease;
+}
+
+.loading-indicator[hidden],
+[hidden] {
+	display: none !important;
+}
+
+.spinner {
+	width: 3.25rem;
+	height: 3.25rem;
+	border: 3.5px solid rgba(255, 255, 255, 0.15);
+	border-top-color: #38bdf8;
+	border-radius: 50%;
+	animation: spin 0.8s linear infinite;
+	box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+}
+
+.loading-text {
+	color: var(--color-text-secondary);
+	font-size: 0.95rem;
+	font-weight: 500;
+	letter-spacing: 0.02em;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Mensajes de Error y Alertas (Status / Error Alerts)
+   -------------------------------------------------------------------------- */
+.status-container {
+	width: 100%;
+}
+
+.alert {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.875rem;
+	padding: 1.125rem 1.25rem;
+	border-radius: var(--radius-md);
+	outline: none;
+	animation: slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.alert--error {
+	background-color: var(--color-error-bg);
+	border: 1px solid var(--color-error-border);
+	color: var(--color-error-text);
+	box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15);
+}
+
+.alert__icon {
+	width: 1.5rem;
+	height: 1.5rem;
+	flex-shrink: 0;
+	stroke: #ef4444;
+	margin-top: 0.125rem;
+}
+
+.alert__content {
+	flex: 1;
+}
+
+.alert__title {
+	font-weight: 700;
+	font-size: 0.95rem;
+	margin-bottom: 0.2rem;
+	color: #fecaca;
+}
+
+.alert__description {
+	font-size: 0.9rem;
+	line-height: 1.4;
+	color: #fca5a5;
+}
+
+/* --------------------------------------------------------------------------
+   Tarjeta Meteorológica (Weather Card)
+   -------------------------------------------------------------------------- */
+.weather-section {
+	margin-top: 3rem;
+	width: 100%;
+}
+
+.weather-card {
+	background: var(--color-surface-card);
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-lg);
+	padding: 1.75rem;
+	box-shadow: var(--shadow-lg), var(--shadow-glow);
+	display: flex;
+	flex-direction: column;
+	gap: 1.75rem;
+	animation: cardEntrance 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+	transition:
+		transform var(--transition-normal),
+		box-shadow var(--transition-normal);
+}
+
+.weather-card:hover {
+	transform: translateY(-2px);
+	box-shadow:
+		var(--shadow-lg),
+		0 0 35px rgba(56, 189, 248, 0.25);
+}
+
+/* Modificadores Atmosféricos por Condición Meteorológica */
+.weather-card.theme-clear-day {
+	border-color: rgba(245, 158, 11, 0.35);
+	box-shadow:
+		var(--shadow-lg),
+		0 0 35px rgba(245, 158, 11, 0.15);
+}
+
+.weather-card.theme-clear-day .weather-card__badge {
+	background: rgba(245, 158, 11, 0.18);
+	border-color: rgba(245, 158, 11, 0.4);
+	color: #fef3c7;
+}
+
+.weather-card.theme-clear-night {
+	border-color: rgba(147, 197, 253, 0.3);
+	box-shadow:
+		var(--shadow-lg),
+		0 0 35px rgba(147, 197, 253, 0.12);
+}
+
+.weather-card.theme-clear-night .weather-card__badge {
+	background: rgba(147, 197, 253, 0.15);
+	border-color: rgba(147, 197, 253, 0.35);
+	color: #e0f2fe;
+}
+
+.weather-card.theme-rain {
+	border-color: rgba(56, 189, 248, 0.35);
+	box-shadow:
+		var(--shadow-lg),
+		0 0 35px rgba(56, 189, 248, 0.15);
+}
+
+.weather-card.theme-rain .weather-card__badge {
+	background: rgba(56, 189, 248, 0.18);
+	border-color: rgba(56, 189, 248, 0.4);
+	color: #e0f2fe;
+}
+
+.weather-card.theme-thunderstorm {
+	border-color: rgba(234, 179, 8, 0.35);
+	box-shadow:
+		var(--shadow-lg),
+		0 0 35px rgba(234, 179, 8, 0.2);
+}
+
+.weather-card.theme-thunderstorm .weather-card__badge {
+	background: rgba(234, 179, 8, 0.2);
+	border-color: rgba(234, 179, 8, 0.45);
+	color: #fef08a;
+}
+
+.weather-card.theme-snow {
+	border-color: rgba(224, 242, 254, 0.4);
+	box-shadow:
+		var(--shadow-lg),
+		0 0 35px rgba(224, 242, 254, 0.18);
+}
+
+.weather-card.theme-snow .weather-card__badge {
+	background: rgba(224, 242, 254, 0.18);
+	border-color: rgba(224, 242, 254, 0.4);
+	color: #f0fdf4;
+}
+
+/* Cabecera de la Tarjeta */
+.weather-card__header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.weather-card__location {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.625rem;
+}
+
+.location-icon {
+	width: 1.5rem;
+	height: 1.5rem;
+	color: #38bdf8;
+	margin-top: 0.25rem;
+	flex-shrink: 0;
+}
+
+.weather-card__city {
+	font-size: clamp(1.4rem, 4vw, 1.85rem);
+	font-weight: 800;
+	color: var(--color-text-primary);
+	line-height: 1.2;
+}
+
+.weather-card__region {
+	font-size: 0.9rem;
+	color: var(--color-text-secondary);
+	margin-top: 0.2rem;
+}
+
+.weather-card__badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.375rem 0.875rem;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: var(--radius-full);
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: #f1f5f9;
+	letter-spacing: 0.01em;
+	backdrop-filter: blur(6px);
+}
+
+/* Área Central de Temperatura e Icono */
+.weather-card__main {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.weather-card__visual {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 6rem;
+	height: 6rem;
+	flex-shrink: 0;
+}
+
+.weather-icon {
+	width: 100%;
+	height: 100%;
+	filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+	transition: transform var(--transition-normal);
+}
+
+.weather-card:hover .weather-icon {
+	transform: scale(1.05);
+}
+
+.weather-card__temperature-box {
+	text-align: right;
+}
+
+.weather-card__temperature {
+	display: inline-flex;
+	align-items: flex-start;
+	font-variant-numeric: tabular-nums;
+	line-height: 1;
+}
+
+.temp-value {
+	font-size: clamp(3.25rem, 9vw, 4.75rem);
+	font-weight: 800;
+	letter-spacing: -0.04em;
+	color: #ffffff;
+}
+
+.temp-unit {
+	font-size: clamp(1.5rem, 4vw, 2.25rem);
+	font-weight: 300;
+	color: #38bdf8;
+	margin-left: 0.25rem;
+	margin-top: 0.25rem;
+}
+
+.weather-card__temp-precision {
+	font-size: 0.85rem;
+	color: var(--color-text-muted);
+	margin-top: 0.5rem;
+}
+
+/* Detalles Inferiores (Grid) */
+.weather-card__details {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+	gap: 1rem;
+}
+
+.detail-item {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 0.875rem 1rem;
+	background: rgba(255, 255, 255, 0.04);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: var(--radius-md);
+	transition: background-color var(--transition-fast);
+}
+
+.detail-item:hover {
+	background: rgba(255, 255, 255, 0.08);
+}
+
+.detail-item__icon-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.25rem;
+	height: 2.25rem;
+	border-radius: var(--radius-sm);
+	background: rgba(56, 189, 248, 0.12);
+	color: #38bdf8;
+	flex-shrink: 0;
+}
+
+.detail-icon {
+	width: 1.25rem;
+	height: 1.25rem;
+}
+
+.detail-item__data {
+	display: flex;
+	flex-direction: column;
+}
+
+.detail-item__label {
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--color-text-secondary);
+}
+
+.detail-item__value {
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--color-text-primary);
+}
+
+.detail-item__value small {
+	font-size: 0.75rem;
+	font-weight: 500;
+	color: var(--color-text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   Pie de Página (Footer)
+   -------------------------------------------------------------------------- */
+.app-footer {
+	text-align: center;
+	padding: 1.5rem 1rem;
+	color: var(--color-text-muted);
+	font-size: 0.85rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.06);
+	margin-top: auto;
+}
+
+.app-footer a {
+	color: #38bdf8;
+	text-decoration: none;
+	font-weight: 500;
+	transition: color var(--transition-fast);
+}
+
+.app-footer a:hover {
+	color: #7dd3fc;
+	text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Estado Inicial / Bienvenida (Empty State)
+   -------------------------------------------------------------------------- */
+.empty-state {
+	text-align: center;
+	padding: 3rem 1.5rem;
+	background: var(--color-surface);
+	border: 1px dashed var(--color-border);
+	border-radius: var(--radius-lg);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.75rem;
+	animation: fadeIn 0.4s ease;
+}
+
+.empty-state__icon {
+	color: #38bdf8;
+	opacity: 0.85;
+	margin-bottom: 0.25rem;
+	filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.3));
+}
+
+.empty-state__title {
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: var(--color-text-primary);
+}
+
+.empty-state__text {
+	font-size: 0.95rem;
+	color: var(--color-text-secondary);
+	max-width: 400px;
+	line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   Animaciones Keyframes
+   -------------------------------------------------------------------------- */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideDown {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes cardEntrance {
+	from {
+		opacity: 0;
+		transform: translateY(18px) scale(0.98);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
