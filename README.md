@@ -113,7 +113,7 @@ Antigravity.
 **Resultado**: Antigravity corrigió el bug lógico refactorizando el manejo de
 estados asíncronos.
 
-Ver prompt de inspección y solución:
+Ver prompt de inspección y el paso a paso de la solución:
 [prompts/02-bug-n1-inspeccion.md](prompts/02-bug-n1-inspeccion.md)
 
 ______________________________________________________________________
