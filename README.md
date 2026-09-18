@@ -102,10 +102,11 @@ ______________________________________________________________________
   <h3>Bug N1 - Spinner de carga permanece visible (Lógico)</h3>
   <img width="535" height="380" alt="Bug spinner de carga" src="https://github.com/user-attachments/assets/119c1973-2787-4898-bf23-571d39796c07" />
 </div>
+
 > El spinner de carga estaba permanentemente visible y no
 desaparecía después de buscar una ciudad.
 
-**Qué hice**: Usé Nemotron Ultra a través de OpenCode en Plan Mode para
+**Resumen**: Usé Nemotron Ultra a través de OpenCode en Plan Mode para
 inspeccionar el código con el mínimo contexto posible. El objetivo era probar si
 el modelo podía reconocer la estructura completa del proyecto sin explicaciones
 extensas. Nemotron identificó el problema y generó un prompt de solución para
@@ -128,11 +129,7 @@ ______________________________________________________________________
 > La tarjeta del clima quedaba muy pegada al header y faltaba el
 footer.
 
-**Resultado**:
-- Agregué margenes a la card para un espaciado correcto
-- Agregué el footer al HTML
-- Estilicé el footer manualmente con CSS
-- Enlacé el footer
+**Resumen**: Agregué margenes a la card para un espaciado correcto y agregué el footer al HTML.
 
 Ver detalle:
 [prompts/03-bug-n2-correccion-manual.md](prompts/03-bug-n2-correccion-manual.md)
