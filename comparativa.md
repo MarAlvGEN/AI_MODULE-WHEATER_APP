@@ -14,9 +14,6 @@
 | **MiMo (Xiaomi)** | **$0 (Gratis)** | - | - |
 | **DeepSeek** | **$0 (Gratis)** | - | - |
 
-![Benchmark de IA](https://github.com/user-attachments/assets/eeefae4f-489d-4a61-8975-2132d3c75083)
-*Fuente: [Artificial Analysis](https://artificialanalysis.ai)*
-
 ---
 
 ## Comparativa de Tiempos
