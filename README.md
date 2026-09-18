@@ -8,11 +8,13 @@
 
 Aplicación interactiva para la consulta del pronóstico meteorológico en tiempo real, desarrollada con tecnologías web vanilla. Impulsada por la API pública y gratuita de [Open-Meteo](https://open-meteo.com/).
 
+<img width="1175" height="629" alt="image" src="https://github.com/user-attachments/assets/1332324f-e4ab-4dd1-b931-3fb5ec473c15" />
+
 ---
 
 ## Resumen del Experimento
 
-El objetivo era generar una aplicación web completa utilizando **la menor cantidad de prompts posible y casi cero interacción humana sobre el código**. Antigravity generó la aplicación con 2 errores evidentes, por lo que también aproveché para hacer comparativas de tiempos.
+El objetivo era generar una aplicación web completa y sencilla que consumiera la API de Open-Meteo utilizando **la menor cantidad de prompts posible y casi cero interacción humana sobre el código**. Antigravity generó la aplicación con 2 errores evidentes, por lo que también aproveché para hacer comparativas de tiempos.
 
 ### Paso 1 - Recopilación en Obsidian
 
