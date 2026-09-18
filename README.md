@@ -18,11 +18,11 @@ El objetivo era generar una aplicación web completa y sencilla que consumiera l
 
 ### Paso 1 - Recopilación en Obsidian
 
-Recopilé los requisitos de la comanda y usé MiMo 2.5 Free (OpenCode en Plan Mode) para generar ideas sobre la estructura de carpetas, estilos y especificaciones técnicas. Todo se escribió directamente en un archivo de Obsidian como borrador.
+Recopilé los requisitos de la comanda y usé MiMo 2.5 Free (OpenCode en Plan Mode) para generar ideas sobre la estructura de carpetas, estilos y especificaciones técnicas. Todo se escribió directamente en un archivo de Obsidian como borrador para eliminar redundancias y preparar el siguiente prompt.
 
 ### Paso 2 - Estructuración con Gemini
 
-Envié los borradores de Obsidian a Gemini Flash 3.6 para que los ordenara, eliminara redundancias y diera forma al prompt final optimizado para Antigravity.
+Envié el borrador de Obsidian a Gemini Flash 3.6 para que lo ordenara y diera forma al [prompt inicial](prompts/01-prompt-inicial.md) optimizado para Antigravity.
 
 ### Paso 3 - Generación con Antigravity
 
