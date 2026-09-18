@@ -132,10 +132,10 @@ algo tan simple cuando el núcleo de la aplicación estaba terminado.
 
 **Resultado**:
 
-- Agregué `margin-top: 2rem` a la card para un espaciado correcto
+- Agregué margenes a la card para un espaciado correcto
 - Agregué el footer al HTML
 - Estilicé el footer manualmente con CSS
-- Enlacé correctamente el footer
+- Enlacé el footer
 
 Ver detalle:
 [prompts/03-bug-n2-correccion-manual.md](prompts/03-bug-n2-correccion-manual.md)
