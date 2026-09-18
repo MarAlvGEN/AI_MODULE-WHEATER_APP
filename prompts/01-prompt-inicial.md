@@ -70,6 +70,8 @@ Por favor, genera el código fuente completo de todos los archivos (`index.html`
 ```
 ## Output
 
+<img width="1358" height="712" alt="image" src="https://github.com/user-attachments/assets/20efa560-9207-4cb3-9524-d2ab32f25a62" />
+
 Antigravity generó todos los archivos solicitados directamente en mi computador. Luego de la inspección se determinó que la aplicación quedó con 1 bug lógico y 1 bug visual.
 
 ## Modelos utilizados en esta fase:
