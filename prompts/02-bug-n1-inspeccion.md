@@ -6,7 +6,7 @@
 
 **Objetivo**: Probar la capacidad de Nemotron para diagnosticar un problema con el mínimo contexto posible.
 
-**Tiempo total**: ~15 min (13 min Nemotron escaneando el proyecto).
+**Tiempo total**: ~15 min (13 min Nemotron escaneando el proyecto y 2 min Antigravity corrigiendo).
 
 <img width="958" height="508" alt="image" src="https://github.com/user-attachments/assets/db11188e-37ac-4a81-adba-f2bbc5fda5e0" />
 
