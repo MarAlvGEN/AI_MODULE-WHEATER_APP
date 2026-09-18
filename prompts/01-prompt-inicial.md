@@ -1,5 +1,9 @@
 # Prompt Inicial - Weather App
 
+<img width="1042" height="671" alt="image" src="https://github.com/user-attachments/assets/08dadb7f-2c59-4048-9497-4d9517e77968" />
+
+> El prompt completo que se envió a Antigravity para generar la aplicación.
+
 - **Optimizado para:** Antigravity (Gemini Flash 3.8 high)
 - **Objetivo:** Generar el proyecto completo de la Weather App
 
