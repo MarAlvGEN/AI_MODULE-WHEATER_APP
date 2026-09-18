@@ -32,7 +32,7 @@ Copié el prompt completo y lo pegué en Antigravity (Gemini Flash 3.8 high). La
 
 Usé Vite para visualizar la web en tiempo real y las DevTools de Firefox para inspeccionar el DOM y CSS
 - Bug N1 (lógico): Spinner de carga permanece visible
-- Bug N2 (visual): Espaciado de card y footer faltante
+- Bug N2 (lógico): Espaciado de card y footer faltante
 
 ### Paso 5 - Corrección de bugs
 
