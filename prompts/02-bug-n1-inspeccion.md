@@ -17,7 +17,7 @@ La idea era darle el menor contexto posible y observar si era capaz de identific
 ## Input (Lo que le dije a Nemotron)
 
 ```
-"Tengo un problema de estado en mi aplicación web vanilla (Weather App). El mensaje/spinner de carga se queda visible permanentemente.
+Tengo un problema de estado en mi aplicación web vanilla (Weather App). El mensaje/spinner de carga se queda visible permanentemente.
 
 Analiza el flujo de llamadas e identifica por qué no se está ejecutando correctamente lo "esperado" tras completar las peticiones HTTP. Muestra dónde se rompe el flujo asíncrono y explícame qué cambios se requieren en el bloque try...catch...finally o en la manipulación del DOM."
 
