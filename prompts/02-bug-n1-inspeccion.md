@@ -1,16 +1,5 @@
 # Bug N1 - Inspección y Corrección
 
-**Problema**: El spinner de carga permanece visible permanentemente antes y después de buscar una ciudad.
-
-**Modelo utilizado**: Nemotron 3 Ultra Free (a través de OpenCode en Plan Mode)
-
-**Objetivo**: Probar la capacidad de Nemotron para diagnosticar un problema con el mínimo contexto posible.
-
-**Tiempo total**: ~15 min (13 min Nemotron escaneando el proyecto y 2 min Antigravity corrigiendo).
-
-<img width="958" height="508" alt="image" src="https://github.com/user-attachments/assets/db11188e-37ac-4a81-adba-f2bbc5fda5e0" />
-
----
 ## Contexto
 
 Al inspeccionar la aplicación generada por Antigravity (Gemini Flash 3.8 high), detecté que el spinner de carga nunca desaparecía. En lugar de enviar el problema directamente a Antigravity, decidí poner a prueba Nemotron 3 Ultra Free a través de OpenCode en Plan Mode para:
@@ -21,6 +10,16 @@ Al inspeccionar la aplicación generada por Antigravity (Gemini Flash 3.8 high),
 4. Que generara un prompt de solución optimizado para Antigravity.
 
 La idea era darle el menor contexto posible y observar si era capaz de identificar el flujo asíncrono roto.
+
+**Problema**: El spinner de carga permanece visible permanentemente antes y después de buscar una ciudad.
+
+**Modelo utilizado**: Nemotron 3 Ultra Free (a través de OpenCode en Plan Mode)
+
+**Objetivo**: Probar la capacidad de Nemotron para diagnosticar un problema con el mínimo contexto posible.
+
+**Tiempo total**: ~15 min (13 min Nemotron escaneando el proyecto y 2 min Antigravity corrigiendo).
+
+<img width="958" height="508" alt="image" src="https://github.com/user-attachments/assets/db11188e-37ac-4a81-adba-f2bbc5fda5e0" />
 
 ---
 ## Input (Lo que le dije a Nemotron)
