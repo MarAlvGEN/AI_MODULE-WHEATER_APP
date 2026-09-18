@@ -44,10 +44,12 @@ aplicación se generó con dos bugs evidentes.
 ### Paso 4 - Inspección y detección de bugs
 
 Usé Vite para visualizar la web en tiempo real y las DevTools de Firefox para
-inspeccionar el DOM y CSS
+inspeccionar el DOM y CSS para investigar más de lo que estaba pasando. Encontrando los siguientes bugs:
 
-- Bug N1 (lógico): Spinner de carga permanece visible
-- Bug N2 (lógico): Espaciado de card y footer faltante
+- [Bug N1 (lógico)](prompts/02-bug-n1-inspeccion.md): Spinner de carga permanece visible
+- [Bug N2 (lógico)](prompts/03-bug-n2-correccion-manual.md): Espaciado de card y footer faltante
+
+
 
 ### Paso 5 - Corrección de bugs
 
@@ -116,6 +118,7 @@ estados asíncronos.
 Ver prompt de inspección y el paso a paso de la solución:
 [prompts/02-bug-n1-inspeccion.md](prompts/02-bug-n1-inspeccion.md)
 
+
 ______________________________________________________________________
 
 <div align="center">
@@ -135,8 +138,3 @@ Ver detalle:
 ______________________________________________________________________
 
 ## Resultado Final
-
-La aplicación resultante cumple con todos los requisitos: búsqueda de ciudades,
-visualización del clima en tiempo real, manejo de estados y diseño responsive.
-
-!\[Weather App - Resultado Final\](assets/demo/Pasted image 20260917154110.png)
