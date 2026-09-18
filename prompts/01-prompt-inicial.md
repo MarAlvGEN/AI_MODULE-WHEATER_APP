@@ -64,11 +64,10 @@ weather-app/
 
 Por favor, genera el código fuente completo de todos los archivos (`index.html`, `styles.css`, `api.js`, `ui.js`, `main.js` y `README.md`) sin omitir líneas ni usar comentarios tipo "// coloca tu código aquí". Todo debe funcionar de inmediato al abrir el index.html en el navegador.
 ```
+## Output
+
+Antigravity generó todos los archivos solicitados directamente en mi computador. Luego de la inspección se determinó que la aplicación quedó con 1 bug lógico y 1 bug visual.
 
 ## Modelos utilizados en esta fase:
 - **MiMo 2.5 Free** - Definió estructura de carpetas y sugirió estilos
 - **Gemini Flash 3.6** - Estructuró requisitos y ordenó prompts
-
-## Output
-
-Antigravity generó todos los archivos solicitados directamente en mi computador. Luego de la inspección se determinó que la aplicación quedó con 1 bug lógico y 1 bug visual.
