@@ -8,7 +8,7 @@
 
 **Tiempo total**: ~15 min (13 min Nemotron escaneando el proyecto).
 
-![[Pasted image 20260917151410.png]]
+<img width="958" height="508" alt="image" src="https://github.com/user-attachments/assets/db11188e-37ac-4a81-adba-f2bbc5fda5e0" />
 
 ---
 ## Contexto
