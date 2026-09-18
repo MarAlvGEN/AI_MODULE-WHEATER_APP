@@ -77,7 +77,7 @@ Ver: [prompts/01-prompt-inicial.md](prompts/01-prompt-inicial.md)
 
 ### Bug N1 - Spinner de carga permanece visible (Lógico)
 
-**Problema**: El spinner de carga no desaparecía después de buscar una ciudad, ni siquiera mostraba errores.
+**Problema**: El spinner de carga estaba permanentemente visible y no desaparecía después de buscar una ciudad.
 
 **Qué hice**: Usé Nemotron Ultra a través de OpenCode en Plan Mode para inspeccionar el código con el mínimo contexto posible. El objetivo era probar si el modelo podía reconocer la estructura completa del proyecto sin explicaciones extensas. Nemotron identificó el problema y generó un prompt de solución para Antigravity.
 
