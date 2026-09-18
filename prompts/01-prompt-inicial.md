@@ -7,14 +7,6 @@
 - **Gemini Flash 3.6** - Estructuró requisitos y ordenó prompts
 - **MiMo 2.5 Free** - Definió estructura de carpetas y sugirió estilos
 
-**Contexto:** El flujo fue el siguiente:
-
-1. **Recopilación en Obsidian**: Usé MiMo 2.5 Free (OpenCode en Plan Mode) para generar ideas iniciales sobre requisitos, estructura de carpetas y estilos. Todo se escribió directamente en un archivo de Obsidian.
-
-2. **Estructuración con Gemini**: Envié los borradores de Obsidian a Gemini Flash 3.6 para que los ordenara, eliminara redundancias y diera forma al prompt final.
-
-3. **Prompt final**: El resultado fue un único prompt optimizado y completo, listo para enviar a Antigravity.
-
 ---
 ## Prompt inicial
 ```
