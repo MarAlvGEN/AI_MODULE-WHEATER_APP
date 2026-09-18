@@ -4,8 +4,8 @@
 **Objetivo:** Generar el proyecto completo de la Weather App
 
 **Modelos utilizados en esta fase:**
-- **Gemini Flash 3.6** - Estructuró requisitos y ordenó prompts
 - **MiMo 2.5 Free** - Definió estructura de carpetas y sugirió estilos
+- **Gemini Flash 3.6** - Estructuró requisitos y ordenó prompts
 
 ---
 ## Prompt inicial
