@@ -11,9 +11,6 @@ Al inspeccionar la aplicación generada por Antigravity (Gemini Flash 3.8 high),
 
 La idea era darle el menor contexto posible y observar si era capaz de identificar el flujo asíncrono roto.
 
-- **Modelo utilizado**: Nemotron 3 Ultra Free (a través de OpenCode en Plan Mode)
-- **Tiempo total**: ~15 min (13 min Nemotron escaneando el proyecto y 2 min Antigravity corrigiendo).
-
 <img width="958" height="508" alt="image" src="https://github.com/user-attachments/assets/db11188e-37ac-4a81-adba-f2bbc5fda5e0" />
 
 ---
