@@ -28,5 +28,12 @@
 | **MiMo (Xiaomi)** | **$0 (Gratis)** | - | - |
 | **DeepSeek** | **$0 (Gratis)** | - | - |
 
----
+## Herramientas Complementarias
+
+| Herramienta          | Uso                                                          |
+| -------------------- | ------------------------------------------------------------ |
+| **Firefox DevTools** | Inspección del DOM y CSS en el navegador                     |
+| **Obsidian**         | Borrador de requisitos y estructuración de prompts           |
+| **nvim**             | Editor de código                                             |
+| **Vite**             | Servidor de desarrollo para visualizar la web en tiempo real |
 

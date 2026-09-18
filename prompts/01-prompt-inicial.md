@@ -1,5 +1,7 @@
 # Prompt Inicial - Weather App
 
+## Contexto
+
 <img width="1042" height="671" alt="image" src="https://github.com/user-attachments/assets/08dadb7f-2c59-4048-9497-4d9517e77968" />
 
 > El prompt completo que se envió a Antigravity para generar la aplicación.
@@ -68,6 +70,7 @@ weather-app/
 
 Por favor, genera el código fuente completo de todos los archivos (`index.html`, `styles.css`, `api.js`, `ui.js`, `main.js` y `README.md`) sin omitir líneas ni usar comentarios tipo "// coloca tu código aquí". Todo debe funcionar de inmediato al abrir el index.html en el navegador.
 ```
+
 ## Output
 
 <img width="1358" height="712" alt="image" src="https://github.com/user-attachments/assets/20efa560-9207-4cb3-9524-d2ab32f25a62" />

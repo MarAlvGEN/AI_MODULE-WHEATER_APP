@@ -12,7 +12,7 @@ gratuita de [Open-Meteo](https://open-meteo.com/).
 
 <img width="1175" height="629" alt="image" src="https://github.com/user-attachments/assets/1332324f-e4ab-4dd1-b931-3fb5ec473c15" />
 
-______________________________________________________________________
+---
 
 ## Resumen del Experimento
 
@@ -49,8 +49,6 @@ inspeccionar el DOM y CSS para investigar más de lo que estaba pasando. Encontr
 - [Bug N1 (lógico)](prompts/02-bug-n1-inspeccion.md): Spinner de carga permanece visible
 - [Bug N2 (lógico)](prompts/03-bug-n2-correccion-manual.md): Espaciado de card y footer faltante
 
-
-
 ### Paso 5 - Corrección de bugs
 
 Cada bug se trató de forma diferente:
@@ -59,7 +57,7 @@ Cada bug se trató de forma diferente:
   prompt → envié a Antigravity → corrigió (~15 min)
 - **Bug N2**: Corrección manual con DevTools + nvim (~3 min)
 
-______________________________________________________________________
+---
 
 ## Herramientas Utilizadas
 
@@ -72,12 +70,4 @@ ______________________________________________________________________
 
 **Costo total del experimento: $0 USD**
 
-**Herramientas complementarias:**
-
-- **Vite** - Servidor de desarrollo para visualizar la web en tiempo real
-- **Firefox DevTools** - Inspección del DOM y CSS en el navegador.
-- **nvim** - Editor de código.
-
-> Este proyecto costó **$0 USD**. Todos los modelos utilizados son gratuitos.
-> Ver comparativa completa de precios:
-> [comparativa.md](comparativa.md)
+> Ver comparativa completa de precios, tiempos y herramientas complementarias: [comparativa.md](comparativa.md)

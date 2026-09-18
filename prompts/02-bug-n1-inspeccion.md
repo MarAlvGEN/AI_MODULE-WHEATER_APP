@@ -68,9 +68,9 @@ Entrégame el código refactorizado y funcional sin omitir ningún fragmento.
 ---
 ## Resultado
 
-Envié el prompt de Nemotron a Antigravity (Gemini Flash 3.8 high) con los siguientes resultados: 
+Envié el prompt de Nemotron a Antigravity (Gemini Flash 3.8 high) con los siguientes resultados:
 
 1. Refactorizó el código y corrigió el bug lógico.
-3. Demoró 2min generando toda la respuesta.
+2. Demoró 2min generando toda la respuesta.
 
 <img width="1345" height="706" alt="image" src="https://github.com/user-attachments/assets/4185d66b-f2e3-4311-921b-e56008396591" />
