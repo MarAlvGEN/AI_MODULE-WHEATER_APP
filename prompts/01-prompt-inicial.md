@@ -1,11 +1,7 @@
 # Prompt Inicial - Weather App
 
-**Motor:** Antigravity (Gemini Flash 3.8 high)
-**Objetivo:** Generar el proyecto completo de la Weather App
-
-**Modelos utilizados en esta fase:**
-- **MiMo 2.5 Free** - Definió estructura de carpetas y sugirió estilos
-- **Gemini Flash 3.6** - Estructuró requisitos y ordenó prompts
+- **Optimizado para:** Antigravity (Gemini Flash 3.8 high)
+- **Objetivo:** Generar el proyecto completo de la Weather App
 
 ---
 ## Prompt inicial
@@ -68,6 +64,10 @@ weather-app/
 
 Por favor, genera el código fuente completo de todos los archivos (`index.html`, `styles.css`, `api.js`, `ui.js`, `main.js` y `README.md`) sin omitir líneas ni usar comentarios tipo "// coloca tu código aquí". Todo debe funcionar de inmediato al abrir el index.html en el navegador.
 ```
+
+## Modelos utilizados en esta fase:
+- **MiMo 2.5 Free** - Definió estructura de carpetas y sugirió estilos
+- **Gemini Flash 3.6** - Estructuró requisitos y ordenó prompts
 
 ## Output
 
