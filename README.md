@@ -61,14 +61,12 @@ ______________________________________________________________________
 
 ## Herramientas Utilizadas
 
-| Modelo | Plan | Costo | Rol | Qué hizo | | --------------------------- |
--------- | ----- | ------------------ |
---------------------------------------------- | | **MiMo 2.5 Free** | Gratuito |
-$0 | Apoyo (prompts) | Definió estructura de carpetas y estilos | | **Gemini
-Flash 3.6** | Gratuito | $0 | Apoyo (prompts) | Estructuró requisitos y ordenó
-prompts | | **Nemotron 3 Ultra Free** | Gratuito | $0 | Apoyo (inspección) |
-Diagnosticó el Bug N1 | | **Gemini Flash 3.8 (high)** | Gratuito | $0 | Motor
-principal | Generó la app (Antigravity) y corrigió Bug N1 |
+| Modelo | Plan | Costo | Rol | Qué hizo |
+| :--- | :--- | :--- | :--- | :--- |
+| **MiMo 2.5 Free** | Gratuito | $0 | Apoyo (prompts) | Definió estructura de carpetas y estilos |
+| **Gemini Flash 3.6** | Gratuito | $0 | Apoyo (prompts) | Estructuró requisitos y ordenó prompts |
+| **Nemotron 3 Ultra Free** | Gratuito | $0 | Apoyo (inspección) | Diagnosticó el Bug N1 |
+| **Gemini Flash 3.8 (high)** | Gratuito | $0 | Motor principal | Generó la app (Antigravity) y corrigió Bug N1 |
 
 **Costo total del experimento: $0 USD**
 
@@ -79,7 +77,7 @@ principal | Generó la app (Antigravity) y corrigió Bug N1 |
 - **nvim** - Editor de código.
 
 > Este proyecto costó **$0 USD**. Todos los modelos utilizados son gratuitos.
-> Ver comparativa completa de precios y tiempos:
+> Ver comparativa completa de precios:
 > [comparativa.md](comparativa.md)
 
 ______________________________________________________________________
