@@ -75,7 +75,12 @@ Ver: [prompts/01-prompt-inicial.md](prompts/01-prompt-inicial.md)
 
 ## Bugs Encontrados
 
-### Bug N1 - Spinner de carga permanece visible (Lógico)
+<div align="center">
+  <h3>Bug N1 - Spinner de carga permanece visible (Lógico)</h3>
+  <img width="535" height="380" alt="Bug spinner de carga" src="https://github.com/user-attachments/assets/119c1973-2787-4898-bf23-571d39796c07" />
+</div>
+
+
 
 **Problema**: El spinner de carga estaba permanentemente visible y no desaparecía después de buscar una ciudad.
 
@@ -87,7 +92,11 @@ Ver prompt de inspección y solución: [prompts/02-bug-n1-inspeccion.md](prompts
 
 ---
 
-### Bug N2 - Correcciones Manuales (Visual)
+<div align="center">
+  <h3>Bug N2 - Card muy pegada el header y footer inexistente (Visual)</h3>
+<img width="608" height="348" alt="image" src="https://github.com/user-attachments/assets/54bf5fcb-8e4a-49bc-b1eb-1ed972e82a2b" />
+
+</div>
 
 **Problema**: La tarjeta del clima quedaba muy pegada al header y faltaba el footer.
 
